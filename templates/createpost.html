@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Create a Post</title>
+</head>
+<body>
+
+    <a href="{{url_for('home')}}">Return to Home Page</a>
+
+    <h1>Create a New Post</h1>
+
+    <form action="{{url_for('create_post')}}" method="post">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required><br><br>
+
+        <label for="content">Content:</label>
+        <textarea id="content" name="content" rows="5" required></textarea><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>
